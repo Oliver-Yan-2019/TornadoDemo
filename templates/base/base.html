@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Lower Coder</title>
+
+    <link rel="stylesheet" href="{{static_url('libs/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{static_url('base/css/style.css')}}" type="text/css">
+    <link rel="shortcut icon" href="{{static_url('img/code.svg')}}" type="image/x-icon"/>
+
+    {% block style %}{% end %}
+</head>
+<body>
+<div class="lc-content container">
+    {% block body %}{% end %}
+</div>
+
+<script src="{{static_url('libs/bootstrap/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

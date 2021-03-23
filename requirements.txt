@@ -1,0 +1,4 @@
+tornado==6.0.3
+mysqlclient==2.0.3
+sqlalchemy==1.4.2
+pysnowflake==0.1.3

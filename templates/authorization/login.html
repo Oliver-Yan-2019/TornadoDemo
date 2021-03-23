@@ -1,0 +1,49 @@
+{% extends ../base/base.html %}
+{% block style %}
+<link rel="stylesheet" href="{{static_url('authorization/css/style.css')}}" type="text/css">
+<style>
+    body {
+        background-image: url("{{static_url('img/background.jpeg')}}");
+        background-repeat: round;
+    }
+</style>
+{% end %}
+
+{% block body %}
+<div class="lc-login-flex flex-column">
+    <div class="lc-login-card card">
+        <div class="lc-login-card-top">
+            <img alt="lc banner" src="{{static_url('img/logo.svg')}}" id="lc_banner">
+        </div>
+
+        <div class="lc-login-card-bottom">
+            <div class="lc-login-form">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="account">手机号</label>
+                        <input type="text" id="account" placeholder="请输入手机号" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" placeholder="请输入密码" class="form-control">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </form>
+            </div>
+
+            <div class="lc-login-selector">
+                <div>其他登陆</div>
+                <div class="lc-login-selector-list">
+                    <img alt="wechat" src="{{static_url('img/wechat.png')}}" class="lc-login-selector-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="lc-approve">
+    <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery">粤ICP备2020106944号</a>
+</div>
+{% end %}
