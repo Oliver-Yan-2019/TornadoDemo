@@ -1,23 +1,54 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends ../common/common.html %}
 
-    <title>Lower Coder</title>
+{% block style %}
+<link rel="stylesheet" href="{{static_url('base/css/base.css')}}" type="text/css">
+{% block base-style %}{% end %}
+{% end %}
 
-    <link rel="stylesheet" href="{{static_url('libs/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{static_url('base/css/style.css')}}" type="text/css">
-    <link rel="shortcut icon" href="{{static_url('img/code.svg')}}" type="image/x-icon"/>
+{% block container %}
+<div class="lc-container-header sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="{{static_url('img/logo-navbar.svg')}}" alt="少点代码 多点想法">
+        </a>
 
-    {% block style %}{% end %}
-</head>
-<body>
-<div class="lc-content container">
-    {% block body %}{% end %}
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" id="HeaderNav">
+                <li class="nav-item" id="HeaderNavHome">
+                    <a class="nav-link" href="/home">首页</a>
+                </li>
+                <li class="nav-item" id="HeaderNavArticle">
+                    <a class="nav-link" href="/article">文章</a>
+                </li>
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"-->
+<!--                       data-toggle="dropdown" aria-expanded="false">-->
+<!--                        关于-->
+<!--                    </a>-->
+<!--                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">-->
+<!--                        <li><a class="dropdown-item" href="#">关于本人</a></li>-->
+<!--                        <li><a class="dropdown-item" href="#">更新日志</a></li>-->
+<!--                        <li>-->
+<!--                            <hr class="dropdown-divider">-->
+<!--                        </li>-->
+<!--                        <li><a class="dropdown-item" href="#">留言板</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+            </ul>
+
+            <form class="d-flex" method="get" action="/article">
+                <input class="form-control mr-2" type="search" placeholder="搜索文章 ... " name="search" aria-label="Search">
+                <button class="btn btn-outline-primary bi-search" type="submit"></button>
+            </form>
+        </div>
+    </nav>
 </div>
 
-<script src="{{static_url('libs/bootstrap/js/bootstrap.min.js')}}"></script>
-</body>
-</html>
+<div class="lc-container-body container d-flex flex-row flex-nowrap justify-content-between align-items-start">
+    {% block container-body %}{% end %}
+</div>
+{% end %}
+
+{% block script %}
+<script src="{{static_url('base/js/base.js')}}"></script>
+{% end %}

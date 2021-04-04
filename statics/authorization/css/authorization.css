@@ -1,0 +1,40 @@
+.lc-login-flex {
+  height: calc(100% - 60px);
+  display: flex; }
+  .lc-login-flex .lc-login-card {
+    margin: auto 0;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    max-width: 400px;
+    max-height: 500px;
+    opacity: .8;
+    display: flex; }
+    .lc-login-flex .lc-login-card .lc-login-card-top {
+      flex: 0 1 auto; }
+      .lc-login-flex .lc-login-card .lc-login-card-top #lc_banner {
+        width: 100%; }
+    .lc-login-flex .lc-login-card .lc-login-card-bottom {
+      flex: 1 1 auto; }
+      .lc-login-flex .lc-login-card .lc-login-card-bottom .lc-login-form form {
+        height: 100%;
+        padding: 10px 40px; }
+      .lc-login-flex .lc-login-card .lc-login-card-bottom .lc-login-selector {
+        height: 100px;
+        padding: 10px 40px; }
+        .lc-login-flex .lc-login-card .lc-login-card-bottom .lc-login-selector .lc-login-selector-list {
+          padding: 10px; }
+          .lc-login-flex .lc-login-card .lc-login-card-bottom .lc-login-selector .lc-login-selector-list .lc-login-selector-icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer; }
+
+.lc-approve {
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  margin: auto;
+  padding: 10px; }
+  .lc-approve a {
+    color: dimgray; }
+
+/*# sourceMappingURL=authorization.css.map */

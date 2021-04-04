@@ -10,6 +10,8 @@ from environment import environment
 
 class App(Application):
     def __init__(self):
+        """主程序"""
+
         environment.initialize()
 
         common_handlers, host_handlers = environment.get_handlers()
@@ -19,6 +21,12 @@ class App(Application):
 
 
 def start_app():
+    """主程序启动
+
+    Returns:
+
+    """
+
     app = App()
     app.listen(8000)  # HTTPServer
     IOLoop.current().start()  # 类的异步网络库, IOLoop和IOStream

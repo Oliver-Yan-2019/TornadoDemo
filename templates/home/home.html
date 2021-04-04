@@ -1,0 +1,66 @@
+{% autoescape None %}
+{% extends ../base/base.html %}
+{% block base-style %}
+<link rel="stylesheet" href="{{static_url('home/css/home.css')}}" type="text/css">
+{% end %}
+
+{% block container-body %}
+<div class="container">
+    <div class="page-header text-center">
+        <h1 id="timeline">更新日志</h1>
+    </div>
+    <ul class="timeline">
+        {% for index, record in enumerate(record_list) %}
+        {% if index % 2 == 0 %}
+        <li>
+            <div class="timeline-badge primary">
+                <a>
+                    <i class="bi bi-clock-fill"
+                       rel="tooltip"
+                       title="{{record.title}}"></i>
+                </a>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <img class="img-responsive" src="{{record.img_url}}" alt="{{record.img_desc}}" width="100%"/>
+                </div>
+                <div class="timeline-body">
+                    <p>{{record.content}}</p>
+                </div>
+                <div class="timeline-footer">
+                    <a><i class="bi bi-hand-thumbs-up"></i></a>
+                    <a><i class="bi bi-share"></i></a>
+                    <a class="float-right">{{record.datetime}}</a>
+                </div>
+            </div>
+        </li>
+        {% else %}
+        <li class="timeline-inverted">
+            <div class="timeline-badge primary">
+                <a>
+                    <i class="bi bi-clock-fill invert"
+                       rel="tooltip"
+                       title="{{record.title}}"></i>
+                </a>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <img class="img-responsive" src="{{record.img_url}}" alt="{{record.img_desc}}" width="100%"/>
+                </div>
+                <div class="timeline-body">
+                    <p>{{record.content}}</p>
+                </div>
+                <div class="timeline-footer">
+                    <a><i class="bi bi-hand-thumbs-up"></i></a>
+                    <a><i class="bi bi-share"></i></a>
+                    <a class="float-right">{{record.datetime}}</a>
+                </div>
+            </div>
+        </li>
+        {% end %}
+        {% end %}
+
+        <li class="clearfix" style="float: none;"></li>
+    </ul>
+</div>
+{% end %}

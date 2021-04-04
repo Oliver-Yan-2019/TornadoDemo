@@ -1,0 +1,19 @@
+{% autoescape None %}
+{% extends ../base/base.html %}
+{% block base-style %}
+<link rel="stylesheet" href="{{static_url('article/css/article.css')}}" type="text/css">
+{% end %}
+
+{% block container-body %}
+<div class="lc-container-navigator w-25 flex-grow-0 flex-shrink-0 list-group">
+    {% for nav_item in nav_list %}
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+        The current link item
+    </a>
+    {% end %}
+</div>
+
+<div class="lc-container-content h-100 flex-grow-1 flex-shrink-1">
+    {{ markdown }}
+</div>
+{% end %}

@@ -1,6 +1,6 @@
-{% extends ../base/base.html %}
+{% extends ../common/common.html %}
 {% block style %}
-<link rel="stylesheet" href="{{static_url('authorization/css/style.css')}}" type="text/css">
+<link rel="stylesheet" href="{{static_url('authorization/css/authorization.css')}}" type="text/css">
 <style>
     body {
         background-image: url("{{static_url('img/background.jpeg')}}");
@@ -9,11 +9,11 @@
 </style>
 {% end %}
 
-{% block body %}
-<div class="lc-login-flex flex-column">
+{% block container %}
+<div class="container lc-login-flex flex-column">
     <div class="lc-login-card card">
         <div class="lc-login-card-top">
-            <img alt="lc banner" src="{{static_url('img/logo.svg')}}" id="lc_banner">
+            <img alt="lc banner" src="{{static_url('img/logo-banner.svg')}}" id="lc_banner">
         </div>
 
         <div class="lc-login-card-bottom">

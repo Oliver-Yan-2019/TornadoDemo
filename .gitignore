@@ -127,4 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-config/develop.conf
+
+# develop config
+develop.conf
+
+# sass cache
+.sass-cache/
